@@ -49,4 +49,4 @@ class Addmovie extends Component {
   }
 }
 
-export default Addmovie;
+export default Addmovie

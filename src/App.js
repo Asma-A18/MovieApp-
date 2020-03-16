@@ -1,10 +1,13 @@
 import React, {Component} from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import Moviecontainer from './components/moviecontainer';
 import Addmovie from './components/addmovie'
 import Search from './components/search'
 import Stars from './components/Rating'
+import Withloading from './components/Withloading'
+
+
+
 
 
 
@@ -97,7 +100,7 @@ handleChangeRating =(star) =>{
         <Stars count={this.state.movierate} handleChangeRating={this.handleChangeRating} rating={(this.state.rating)}/>
         <Moviecontainer filteredmovies={filteredmovies}/>
         <Addmovie handlename={this.handlename} addmovie={this.addmovie} title={this.state.title} img={this.state.img}year={this.state.year}rating={this.state.rating}/>
-
+<Withloading/>
 
       </div>
     )
@@ -115,4 +118,4 @@ handleChangeRating =(star) =>{
 
 
 
-export default App;
+export default Withloading(App);

@@ -2,8 +2,7 @@ import React, { Component } from 'react'
 import Stars from './Rating'
 import Moviecard from './MovieCard'
 
-
-export default class Moviecontainer extends Component {
+ class Moviecontainer extends Component {
   
   render() {
    const movies =  this.props.filteredmovies.map((el,i)=> { 
@@ -11,7 +10,6 @@ export default class Moviecontainer extends Component {
  
       <Moviecard title ={el.title} year ={el.year} img ={el.img} key={i}/>
       <Stars count = {el.rating} />
-
        </div>
       })
     return (
@@ -25,6 +23,7 @@ export default class Moviecontainer extends Component {
   }
 }
 
+export default Moviecontainer
 
  
 
